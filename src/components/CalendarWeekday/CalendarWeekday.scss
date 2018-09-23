@@ -1,0 +1,26 @@
+@import '../../assets/styles/index.scss';
+
+$calendarDayFontSize: 0.8em;
+$calendarDayHeight: 4vw;
+
+.calendar-weekday {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: $calendarGridGap;
+  margin: 0 auto 1em;
+  max-width: $calendarMaxWidth;
+  padding: 0;
+
+  &-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: $calendarDayFontSize;
+    height: $calendarDayHeight;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

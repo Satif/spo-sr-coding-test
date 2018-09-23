@@ -1,0 +1,43 @@
+@import '../../assets/styles/index.scss';
+
+$calendarHeaderBackColor: rgba(0, 0, 0, 0.63);
+$calendarHeaderMinHeight: 40px;
+
+$calendarHeaderButtonFontSize: 1em;
+$calendarHeaderButtonBackColor: #444141;
+
+$calendarHeaderMonthFontSize: 2em;
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  background: $calendarHeaderBackColor;
+  color: $color-white;
+  align-items: center;
+  min-height: $calendarHeaderMinHeight;
+  margin-bottom: 1em;
+
+  button {
+    padding: 5px 10px;
+    font-size: $calendarHeaderButtonFontSize;
+    background-color: $calendarHeaderButtonBackColor;
+    color: $color-white;
+    cursor: pointer;
+  }
+
+  &-month {
+    font-size: $calendarHeaderMonthFontSize;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .calendar-header {
+    &-month {
+      font-size: 1em;
+    }
+
+    button {
+      font-size: 0.8em;
+    }
+  }
+}

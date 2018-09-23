@@ -1,0 +1,77 @@
+@import '../../assets/styles/index.scss';
+
+$calendarDayFontSize: 0.8em;
+$calendarDayBackColor: #eaeaea;
+$calendarDayBorderColor: #eaeaea;
+$calendarDayHeight: 12vw;
+$calendarDayMaxHeight: 125px;
+$calendarDayPadding: 16px 0 0 0;
+$calendarDayDisabledBackColor: #ccc;
+
+$calendarReminderRed: red;
+$calendarReminderBlue: blue;
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: $calendarGridGap;
+  margin: 0 auto;
+  max-width: $calendarMaxWidth;
+  padding: 0;
+
+  &-day {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: $calendarDayFontSize;
+    background-color: $calendarDayBackColor;
+    border: 1px solid $calendarDayBorderColor;
+    height: $calendarDayHeight;
+    max-height: $calendarDayMaxHeight;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    padding: $calendarDayPadding;
+    overflow: hidden;
+  }
+
+  &-day.disabled {
+    background-color: $calendarDayDisabledBackColor;
+    pointer-events: none;
+  }
+
+  &-date {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+  }
+
+  // TODO: Move to separate component
+  &-reminder {
+    text-align: left;
+    width: 100%;
+    white-space: nowrap;
+    color: $color-black;
+
+    &.red {
+      color: $color-white;
+      background-color: $calendarReminderRed;
+    }
+
+    &.blue {
+      color: $color-white;
+      background-color: $calendarReminderBlue;
+    }
+
+    span {
+      margin-right: 4px;
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .calendar-days {
+    grid-gap: 0.25em;
+  }
+}

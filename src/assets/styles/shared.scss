@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+.btn {
+  box-shadow: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+  color: $color-white;
+  padding: 5px 10px;
+  font-size: $buttonFontSize;
+  margin: 0;
+
+  &--danger {
+    background-color: $buttonDangerBackColor;
+    margin: 0;
+    float: left;
+  }
+
+  &--success {
+    background-color: $buttonSuccessBackColor;
+  }
+}
+
+// Fast fix for react-timepicker
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list {
+  padding: 0;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  display: block;
+
+  input {
+    width: 100%;
+  }
+}

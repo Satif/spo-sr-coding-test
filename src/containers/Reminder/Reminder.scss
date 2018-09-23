@@ -1,0 +1,36 @@
+@import '../../assets/styles/index.scss';
+
+.reminder {
+  h2 {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+  textarea {
+    padding: 5px;
+    resize: none;
+    width: 100%;
+  }
+  &-colors {
+    display: flex;
+    margin: 10px 0;
+
+    &-color {
+      &--blue {
+        color: $reminderColorBlue;
+      }
+
+      &--red {
+        color: $reminderColorRed;
+      }
+    }
+  }
+
+  .btn {
+    margin: 0 0 0 auto;
+
+    &--danger {
+      margin: 0;
+      float: left;
+    }
+  }
+}

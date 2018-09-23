@@ -1,0 +1,36 @@
+{
+  "/reminders": {
+    "get": {
+      "data": [
+        {
+          "id": 123123,
+          "reminder": "Reminder 1",
+          "time": "2018-09-10T23:45:00.000Z",
+          "color": "red"
+        },
+        {
+          "id": 14565,
+          "reminder": "Reminder 2",
+          "time": "2018-09-09T19:00:00.000Z",
+          "color": "blue"
+        },
+        {
+          "id": 1789789,
+          "reminder": "Reminder 3",
+          "time": "2018-09-09T16:00:00.000Z",
+          "color": "red"
+        }
+      ]
+    },
+    "post": {
+      "data": [
+        {
+          "id": 6546565,
+          "reminder": "Reminder posted",
+          "time": "2018-09-09T10:00:00.000Z",
+          "color": "red"
+        }
+      ]
+    }
+  }
+}
